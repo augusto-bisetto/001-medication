@@ -10,6 +10,14 @@
 </head>
 <body>
     <h1>Health Application</h1>
-    
+    <a href="/doctor/create">Create new doctor</a>
+
+  <% doctor.forEach( (doctor) => { %>
+    <div>
+      <h3><%= doctor.title %> </h3>
+      <%- doctor.content %> 
+    </div>
+  <% }); %>
+
 </body>
 </html>
