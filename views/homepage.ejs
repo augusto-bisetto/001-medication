@@ -11,13 +11,16 @@
 <body>
     <h1>Health Application</h1>
     <p>how are you feeling today {{patient name}}?</p> 
+        <input type="text" id="fname" name="fname"><br><br>
 
     <h2>your paramenters</h2>
 
     <h2>your appointments</h2>
         <p>upcoming appointments</p>
+        <!-- connect to appointments database -->
         <button @click="appointmentsPage">see all appointments</button>
-    <h2>medical records</h2>
+    
+        <h2>medical records</h2>
         <button @click="medicalId">ACESS YOUR MEDICAL ID</button>
 </body>
 </html>
