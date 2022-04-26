@@ -13,9 +13,9 @@ mongoose.connect(mongoDbURI)
 
 require('./models/Doctor')
 
-// app.use(require('./routes/'))
+ app.use(require('./routes/frontend'))
 
-// const frontendRoutes = require('./routes/')
+const frontendRoutes = require('./routes/frontend')
 
 
 app.listen(3000)
