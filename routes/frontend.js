@@ -15,6 +15,19 @@ router.get('/', async (req,res) => {
   })
 })
 
+router.post('/sign-up', async (req,res) => {
+  await Doctor.create(req.body)
+  res.render('sign-up', {})
+})
+
+router.get('/sign-up', (req,res) => {
+  res.render('sign-up', {})
+})
+
+router.get('/sign-up/:id', () => {
+  
+})
+
 router.post('/appointments', async (req,res) => {
   await Doctor.create(req.body)
   res.render('appointments', {})
