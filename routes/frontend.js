@@ -15,17 +15,30 @@ router.get('/', async (req,res) => {
   })
 })
 
-router.post('/doctor/create', async (req,res) => {
+router.post('/appointments', async (req,res) => {
   await Doctor.create(req.body)
-  res.render('new-doctor', {})
+  res.render('appointments', {})
 })
 
-router.get('/doctor/create', (req,res) => {
-  res.render('new-doctor', {})
+router.get('/appointments', (req,res) => {
+  res.render('appointments', {})
+})
+
+router.get('/appointments/:id', () => {
+  
 })
 
 
-router.get('/doctor/:id', () => {
+router.post('/medicalID', async (req,res) => {
+  await Doctor.create(req.body)
+  res.render('medicalID', {})
+})
+
+router.get('/medicalID', (req,res) => {
+  res.render('medicalID', {})
+})
+
+router.get('/medicalID/:id', () => {
   
 })
 
