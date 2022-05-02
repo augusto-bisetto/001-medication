@@ -10,6 +10,8 @@
 </head>
 <body>
     <h1>Health Application</h1>
+    <button onclick="window.location.href='/sign-up'">SIGN UP</button>
+
     <p>how are you feeling today {{patient name}}?</p> 
         <input type="text" id="name" name="name"><br><br>
 
@@ -18,9 +20,9 @@
     <h2>your appointments</h2>
         <p>upcoming appointments</p>
         <!-- connect to appointments database -->
-        <button onclick="window.location.href='/appointments.ejs'">see all appointments</button>
+        <button onclick="window.location.href='/appointments'">see all appointments</button>
     
         <h2>medical records</h2>
-        <button onclick="window.location.href='/medicalID.ejs'">Continue</button>
+        <button onclick="window.location.href='/medicalID'">Continue</button>
 </body>
 </html>
