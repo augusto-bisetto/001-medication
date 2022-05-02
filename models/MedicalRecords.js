@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 
-const MedicalRecordsSchema = new mongoose.Schema({
+const medicalrecordsSchema = new mongoose.Schema({
     Vaccinations: String, 
     Documents: String, 
     User: String, 
@@ -9,4 +9,4 @@ const MedicalRecordsSchema = new mongoose.Schema({
 })
 
 
-mongoose.model('medicalrecords', MedicalRecordsSchema)
+mongoose.model('medicalrecords', medicalrecordsSchema)
