@@ -1,11 +1,17 @@
 const express = require('express')
 const mongoose = require('mongoose')
+const session = require('express-session')
 const bodyParser = require('body-parser');
 
 const app =  express()
 
 app.use(express.static('public'))
+app.use(session({
+    secret:'sdfghjuk',
+    name:'123er',
+    saveUnitialized: false
 
+}))
 
 app.set('view engine','ejs')
 

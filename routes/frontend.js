@@ -16,8 +16,38 @@ router.get('/', async (req,res) => {
   })
 })
 
+router.get('/sign-out', async (req,res) => {
+  req.session.user = null
+  res.redirect('/homepage')
+})
+
+router.get('/sign-in', async (req,res) => {
+  if (req.session.user){
+    res.redirect('/homepage')
+  } else {
+    res.render('sign-in', {
+    })
+  }
+})
+
+
+router.post('/sign-in', async (req,res) => {
+  const newUser = await Patient.findOne({
+    email : req.body.email,
+    password : req.body.password,
+  })
+  if (newUser){
+    req.session.user = newUser    
+  }else {
+    res.render('sign-in', {
+      message: 'Wrong credential'
+    })
+  }
+})
+
 router.post('/sign-up', async (req,res) => {
-  await Patient.create(req.body)
+  const newUser = await Patient.create(req.body)
+  req.session.user = newUser
   res.render('homepage', {})
 })
 
@@ -35,12 +65,10 @@ router.post('/appointments', async (req,res) => {
 })
 
 router.get('/appointments', (req,res) => {
-  if (req.user){
-    res.render('appointments', {})
-  }else{
-    res.redirect('/sign-up')
-    
-  }
+  // if (req.session.user){
+    res.render('appointments', {
+      user: req.session.user
+    })
 })
 
 router.get('/appointments/:id', () => {
