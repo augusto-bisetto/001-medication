@@ -4,6 +4,10 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
+    "@fullcalendar/core": "^5.11.0",
+    "@fullcalendar/daygrid": "^5.11.0",
+    "@fullcalendar/list": "^5.11.0",
+    "@fullcalendar/timegrid": "^5.11.0",
     "body": "^5.1.0",
     "ejs": "^3.1.6",
     "express": "^4.17.3",
