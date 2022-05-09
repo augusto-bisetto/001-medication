@@ -7,10 +7,8 @@ const userSchema = new mongoose.Schema({
 
 }) 
 
+mongoose.model('user', userSchema)
 
 
 
 
-
-isPatient..false
-is.false
