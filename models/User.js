@@ -1,5 +1,5 @@
 
-const accountsSchema = new mongoose.Schema({
+const userSchema = new mongoose.Schema({
     Users: String, 
     Data: String, 
     Password: String, 
