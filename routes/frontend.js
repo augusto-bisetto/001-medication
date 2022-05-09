@@ -1,18 +1,17 @@
 const express = require('express')
 const mongoose = require('mongoose')
 
-const Doctor = mongoose.model('doctor')
-const Patient = mongoose.model('patient')
+const User = mongoose.model('user')
+
 
 const router = express.Router()
 
 
 router.get('/', async (req,res) => {
   
-  const doctor = await Doctor.find().lean()
-  console.log(doctor)
+  const user = await User.find().lean()
   res.render('homepage', {
-    doctor:doctor
+    user:user
   })
 })
 
