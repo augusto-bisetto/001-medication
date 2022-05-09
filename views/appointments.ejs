@@ -3,6 +3,7 @@
   <head>
     <meta charset='utf-8' />
     <link href='/Calendar/main.min.css' rel='stylesheet'/>
+    <link rel="stylesheet" href="/appointments.css">
   </head>
   <body>
     <div id='external-events'>
@@ -37,5 +38,52 @@
     </div>
     <div id='calendar'></div>
     <script src='/Calendar/main.min.js'></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+    var Calendar = FullCalendar.Calendar;
+    var Draggable = FullCalendar.Draggable;
 
+    var containerEl = document.getElementById('external-events');
+    var calendarEl = document.getElementById('calendar');
+    var checkbox = document.getElementById('drop-remove');
+  
+      new Draggable(containerEl, {
+      itemSelector: '.fc-event',
+      eventData: function(eventEl) {
+        return {
+          title: eventEl.innerText
+        };
+      }
+    });
+    
+    var calendar = new Calendar(calendarEl, {
+      headerToolbar: {
+        left: 'prev,next today',
+        center: 'title',
+        right: 'dayGridMonth,timeGridWeek,timeGridDay' 
+      },
+      
+      events: [
+      {
+      title  : 'event1',
+      start  : '2022-05-01T12:30:00',
+      allDay : false // will make the time show
+      },
+      {
+      title  : 'event2',
+      start  : '2022-05-01T12:30:00',
+      allDay : false // will make the time show
+      },
+      {
+      title  : 'event3',
+      start  : '2022-05-01T12:30:00',
+      allDay : false // will make the time show
+      }
+    ]
+  });
+    calendar.render();
+  });
+
+
+    </script>
   </body>
