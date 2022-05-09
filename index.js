@@ -18,8 +18,8 @@ app.set('view engine','ejs')
 const mongoDbURI = 'mongodb+srv://test:test@cluster0.1vosb.mongodb.net/blogdatabase?retryWrites=true&w=majority'
 mongoose.connect(mongoDbURI)
 
-require('./models/Doctor')
-require('./models/Patient')
+require('./models/User')
+
 
  app.use(require('./routes/frontend'))
 
