@@ -7,8 +7,14 @@
     <title>Document</title>
 </head>
 <body>
-    <h3>name:</h3> <p>{{name}}</p>
-    <h3>surname:</h3> <p>{{Sname}}</p>
-    <a href="/">homepage</a>
+    <h3>name:</h3> <p>{{userSchema.name}}</p>
+    <h3>surname:</h3> <p>{{userSchema.surname}}</p>
+    <h3>surgeries:</h3> <p>{{medicalrecordsSchema.surgeries}}</p>
+    <h3>allergies:</h3> <p>{{medicalrecordsSchema.allergies}}</p>
+    <h3>medications:</h3> <p>{{medicalrecordsSchema.medications}}</p>
+    <h3>vaccines:</h3> <p>{{medicalrecordsSchema.vaccines}}</p>
+
+
+    <button onclick="window.location.href='/'">Homepage</button>
 </body>
 </html>
