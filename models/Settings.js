@@ -2,8 +2,8 @@ const mongoose = require('mongoose')
 
 const settingsSchema = new mongoose.Schema({
   profile: String,
-  username: String,
-  email: String,
+  notification: String,
+  layout: String,
  
 })
 
