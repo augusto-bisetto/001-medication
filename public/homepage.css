@@ -5,6 +5,13 @@ h1{
 .sign-up{
     padding-left: 20px;
 }
+p strong{
+    padding-left: 20px;
+}
+
+input{
+    padding-left: 20px;
+}
 
 .col{
     border: 2px solid rgb(231, 231, 231);
@@ -12,7 +19,3 @@ h1{
 }
 
 
-.recipes{
-    border: 2px solid rgb(37, 37, 37);
-    border-radius: 20px;
-}
