@@ -1,6 +1,5 @@
 const express = require('express')
 const mongoose = require('mongoose')
-
 const User = mongoose.model('user')
 
 
@@ -9,7 +8,7 @@ const router = express.Router()
 
 router.get('/', async (req,res) => {
   
-  const user = await User.find().lean()
+  const user = req.session.user
   res.render('homepage', {
     user:user
   })
@@ -17,7 +16,7 @@ router.get('/', async (req,res) => {
 
 router.get('/sign-out', async (req,res) => {
   req.session.user = null
-  res.redirect('/homepage')
+  res.redirect('/')
 })
 
 router.get('/sign-in', async (req,res) => {
@@ -25,18 +24,20 @@ router.get('/sign-in', async (req,res) => {
     res.redirect('/homepage')
   } else {
     res.render('sign-in', {
+      message: ''
     })
   }
 })
 
 
 router.post('/sign-in', async (req,res) => {
-  const newUser = await Patient.findOne({
+  const newUser = await User.findOne({
     email : req.body.email,
     password : req.body.password,
   })
   if (newUser){
     req.session.user = newUser    
+    res.redirect('/')
   }else {
     res.render('sign-in', {
       message: 'Wrong credential'
@@ -45,9 +46,10 @@ router.post('/sign-in', async (req,res) => {
 })
 
 router.post('/sign-up', async (req,res) => {
-  const newUser = await Patient.create(req.body)
+  console.log(req.body)
+  const newUser = await User.create(req.body)
   req.session.user = newUser
-  res.render('homepage', {})
+  res.redirect('/')
 })
 
 router.get('/sign-up', (req,res) => {
