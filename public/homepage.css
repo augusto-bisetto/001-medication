@@ -7,6 +7,15 @@ h1{
 }
 p strong{
     padding-left: 20px;
+    color: #3F88AE;
+}
+
+.medicalID{
+    background-color: #DD5471;
+    color: white;
+    border-color: #DD5471;
+    box-shadow: none;
+    border-radius: 10px;
 }
 
 input{
