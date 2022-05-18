@@ -10,9 +10,9 @@
 </head>
 <body>
     <% if (user) { %>
-      <h2> You are logged in as <%= (user.email) %></h2>
+      <h3> You are logged in as <%= (user.email) %></h3>
     <% }else{ %>
-      Not logged in
+      <h3>Not logged in</h3>
     <%}%>
     <h1>Health Application</h1>
     <button class="sign-up"onclick="window.location.href='/sign-up'">SIGN UP</button>
@@ -20,7 +20,7 @@
     <button class="sign-out"onclick="window.location.href='/sign-out'">SIGN OUT</button>
 
 
-    <p><strong>how are you feeling today {{user.name}}?</strong></p> 
+    <p><strong>how are you feeling today <%= user.name %>   ?</strong></p> 
     <input type="text" id="name" name="name"><br><br>
 
         <div class="container">

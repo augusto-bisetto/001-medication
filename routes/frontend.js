@@ -24,6 +24,7 @@ router.get('/sign-in', async (req,res) => {
     res.redirect('/homepage')
   } else {
     res.render('sign-in', {
+      message: ''
     })
   }
 })
@@ -36,6 +37,7 @@ router.post('/sign-in', async (req,res) => {
   })
   if (newUser){
     req.session.user = newUser    
+    res.redirect('/')
   }else {
     res.render('sign-in', {
       message: 'Wrong credential'

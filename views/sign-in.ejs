@@ -11,7 +11,13 @@
     <form action="/sign-in" style="border:1px solid #ccc" method="POST">
         <div class="container">
           <h1>Sign In</h1>
-          
+    <% if (message) { %>
+
+          <div class="alert">
+            <%= message %>
+          </div>
+    <% } %>
+      <!-- endif -->
           <hr>
       
           <label for="email"><b>Email</b></label>
