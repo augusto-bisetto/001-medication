@@ -27,7 +27,11 @@
           <input type="password" placeholder="Enter Password" name="password" required>
 
           <label for="type"><b>Are you a patient or a doctor</b></label>
-          <input type="text" placeholder="Enter type" name="type" required>
+          <select name="type" id="">
+            <option value="">Select</option>
+            <option value="doctor">Doctor</option>
+            <option value="patient">Patient</option>
+          </select>
       
           <label>
             <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
