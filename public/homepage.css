@@ -6,14 +6,16 @@ h2{
     text-transform: uppercase;
 }
 
-.sign-up{
-    padding-left: 20px;
-}
-
 p strong{
     padding-left: 20px;
     color: #3F88AE;
 }
+
+input{
+    padding-left: 20px;
+}
+
+/* --------------------------------- */
 
 .medicalRecords{
     background-color: #DD5471;
@@ -29,10 +31,6 @@ p strong{
     border-color: #8561D1;
     box-shadow: none;
     border-radius: 10px;
-}
-
-input{
-    padding-left: 20px;
 }
 
 .col{
