@@ -9,4 +9,4 @@ const medicalrecordsSchema = new mongoose.Schema({
 })
 
 
-mongoose.model('medicalrecords', medicalrecordsSchema)
+mongoose.model('medicalRecords', medicalrecordsSchema)

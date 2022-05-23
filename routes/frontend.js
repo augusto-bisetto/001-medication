@@ -77,16 +77,16 @@ router.get('/appointments/:id', () => {
 })
 
 
-router.post('/medicalID', async (req,res) => {
+router.post('/medicalRecords', async (req,res) => {
   await Doctor.create(req.body)
-  res.render('medicalID', {})
+  res.render('medicalRecords', {})
 })
 
-router.get('/medicalID', (req,res) => {
-  res.render('medicalID', {})
+router.get('/medicalRecords', (req,res) => {
+  res.render('medicalRecords', {})
 })
 
-router.get('/medicalID/:id', () => {
+router.get('/medicalRecords/:id', () => {
   
 })
 
