@@ -23,6 +23,7 @@ const mongoDbURI = 'mongodb+srv://test:test@cluster0.1vosb.mongodb.net/blogdatab
 mongoose.connect(mongoDbURI)
 
 require('./models/User')
+require('./models/MedicalRecords')
 
 
  app.use(require('./routes/frontend'))
