@@ -60,17 +60,37 @@
     });
     
     var calendar = new Calendar(calendarEl, {
+      eventClick: function(info) {
+      var eventObj = info.event;
+
+      if (eventObj.url) {
+        alert(
+          'Clicked ' + eventObj.title + '.\n' +
+          'Will open ' + eventObj.url + ' in a new tab'
+        );
+
+        window.open(eventObj.url);
+
+        info.jsEvent.preventDefault(); // prevents browser from following link in current tab.
+      } else {
+        alert('Clicked ' + eventObj.title);
+      }
+    },
+      timeZone: 'UTC',
+      dayMaxEventRows: true, 
       headerToolbar: {
         left: 'prev,next today',
         center: 'title',
         right: 'dayGridMonth,timeGridWeek,timeGridDay' 
       },
+      editable: true,
+      dayMaxEvents: true,
       events: [
       {
       title  : 'event1',
       start  : '2022-05-01T12:30:00',
-      daysOfWeek:[2, 4],
-      allDay : false // will make the time show
+      allDay : false, // will make the time show
+      dayMaxEventRows: 6
       },
       {
       title  : 'event2',
@@ -82,8 +102,10 @@
       start  : '2022-05-01T12:30:00',
       allDay : false // will make the time show
       }
+      
     ]
-  });
+    });
+    
     calendar.render();
   });
 
