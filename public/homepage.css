@@ -2,8 +2,36 @@ h1{
     padding-left: 20px;
 }
 
-.sign-up{
+h2{
+    text-transform: uppercase;
+}
+
+p strong{
     padding-left: 20px;
+    color: #3F88AE;
+}
+
+input{
+    padding-left: 20px;
+}
+
+
+/* --------------------------------- */
+
+.medicalRecords{
+    background-color: #DD5471;
+    color: white;
+    border-color: #DD5471;
+    box-shadow: none;
+    border-radius: 10px;
+}
+
+.upcomingE{
+    background-color: #8561D1;
+    color: white;
+    border-color: #8561D1;
+    box-shadow: none;
+    border-radius: 10px;
 }
 
 .col{
@@ -12,7 +40,3 @@ h1{
 }
 
 
-.recipes{
-    border: 2px solid rgb(37, 37, 37);
-    border-radius: 20px;
-}
