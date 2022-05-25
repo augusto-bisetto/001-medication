@@ -77,17 +77,6 @@ router.get('/appointments/:id', () => {
 })
 
 
-router.post('/medicalRecords', async (req,res) => {
-  await Doctor.create(req.body)
-  res.render('medicalRecords', {})
-})
 
-router.get('/medicalRecords', (req,res) => {
-  res.render('medicalRecords', {})
-})
-
-router.get('/medicalRecords/:id', () => {
-  
-})
 
 module.exports = router;

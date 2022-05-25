@@ -30,5 +30,9 @@ require('./models/MedicalRecords')
 
 const frontendRoutes = require('./routes/frontend')
 
+app.use(require('./routes/MedRec'))
+
+const MedRecRoutes = require('./routes/MedRec')
+
 
 app.listen(3000)
