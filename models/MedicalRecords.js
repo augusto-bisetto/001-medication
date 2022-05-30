@@ -3,7 +3,7 @@ const mongoose = require('mongoose')
 const medicalrecordsSchema = new mongoose.Schema({
     surgeries: String, 
     allergies: String, 
-    medication: String, 
+    immunizations: String, 
     vaccinates: String, 
 
 })
