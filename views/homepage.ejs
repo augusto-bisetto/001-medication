@@ -22,7 +22,7 @@
     <button class="complete-account"onclick="window.location.href='/complete-account'">Complete your Account</button>
 
 
-    
+
     <h1>Health Application</h1>
 
 
@@ -56,8 +56,22 @@
                <p class="pathRes">{{pathResult}}</p>
               </div>
               <div class="col-5">
-                <h2>Recipies</h2>
-                <p class="recipies">{{recipe}}</p>
+                <h2>Prescriptions</h2>
+                <div class="card" style="width: 18rem;">
+                  <div class="card-body">
+                    <h5 class="card-title">prescription.name</h5>
+                    <p class="card-text">prescription.docComment</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                  </div>
+                  <!-- <div class="card" style="width: 18rem;">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div> -->
+                </div>
+                <p class="prescriptions">{{prescriptions}}</p>
               </div>
             </div>
 
