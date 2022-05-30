@@ -32,16 +32,16 @@ router.post('/surgeries', async (req,res) => {
     
   })
 
-  router.post('/medication', async (req,res) => {
+  router.post('/immunizations', async (req,res) => {
     await Doctor.create(req.body)
-    res.render('medication', {})
+    res.render('immunizations', {})
   })
   
-  router.get('/medication', (req,res) => {
-    res.render('medication', {})
+  router.get('/immunizations', (req,res) => {
+    res.render('immunizations', {})
   })
   
-  router.get('/medication/:id', () => {
+  router.get('/immunizations/:id', () => {
     
   })
 
