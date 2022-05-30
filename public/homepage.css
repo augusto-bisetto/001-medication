@@ -6,22 +6,43 @@ h2{
     text-transform: uppercase;
 }
 
-p strong{
-    padding-left: 20px;
+h3{
+    margin-left: 20px;
+}
+
+strong{
+    margin-left: 20px;
     color: #3F88AE;
 }
 
 input{
-    padding-left: 20px;
+    margin-left: 20px;
 }
 
 
 /* --------------------------------- */
 
-.medicalRecords{
-    background-color: #DD5471;
+.surgeries{
+    background-color: #3F88AE;
     color: white;
-    border-color: #DD5471;
+    border-color: #3F88AE;
+    box-shadow: none;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.allergies{
+    background-color: #F8D377;
+    color: white;
+    border-color: #F8D377;
+    box-shadow: none;
+    border-radius: 10px;
+}
+
+.immunizations{
+    background-color: #61D3A4;
+    color: white;
+    border-color: #61D3A4;
     box-shadow: none;
     border-radius: 10px;
 }
