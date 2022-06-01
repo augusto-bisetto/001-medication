@@ -19,10 +19,6 @@ input{
     margin-left: 20px;
 }
 
-button{
-    display: block;
-}
-
 /* --------------------------------- */
 
 .surgeries{
@@ -32,6 +28,7 @@ button{
     box-shadow: none;
     border-radius: 10px;
     margin-bottom: 10px;
+    display: block;
 }
 
 .allergies{
@@ -40,6 +37,8 @@ button{
     border-color: #F8D377;
     box-shadow: none;
     border-radius: 10px;
+    margin-bottom: 10px;
+    display: block;
 }
 
 .immunizations{
@@ -56,6 +55,7 @@ button{
     border-color: #8561D1;
     box-shadow: none;
     border-radius: 10px;
+    display: block;
 }
 
 .col{
@@ -63,4 +63,6 @@ button{
     border-radius: 20px;
 }
 
-
+.card-header{
+    margin-bottom: 10px;
+}
