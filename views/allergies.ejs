@@ -10,21 +10,79 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="col-5">
-        <h2>Allergies Name </h2>
-        <h2> Quantity</h2>
-        <h2> Description</h2>
-        <h2> Symptoms</h2>
-        <div>
-            <input type="range" id="feeling" name="feeling"
-                   min="0" max="10">
-            <label for="feeling">Feeling when have it</label>
-          </div>
-          
-         
+    <div class="container">
 
+        <h2>Allergies lists</h2>
+        <div class="row">
+            <% allergies.forEach(allergy => { %>                 
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <%= allergy.name %> 
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-12">
+                                    <h6><b>Description</b></h6>
+                                    <p class="card-text"><%= allergy.description %></p>    
+                                </div>
+                                <div class="col-6">
+                                    <h6><b>Symptoms</b></h6>
+                                    <p><%= allergy.symptoms %> </p>
+
+                                </div>
+                                <div class="col-6">
+                                    <h6><b>Feelings</b></h6>
+                                    <p><%= allergy.feeling %> </p>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>    
+            <% }) %>
+            <% if (allergies.length == 0) { %>
+                <h2>No allergies added yet</h2>
+            <% } %>
+        </div>
+        <h2>Create new</h2>
+        <div class="card">
+            <div class="card-body">
+                <form action="" method="post" class="row mt-3">
+                    <div class="col-12 col-md-6">
+                        <div class="form-grup">
+                            <label for="name">Name</label>
+                            <input type="text" name="name" id="name" class="form-control">
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <div class="form-group">
+                            <label for=""> Description</label>
+                            <textarea name="description" id="" cols="30" rows="10" class="form-control"></textarea>
+                        </div>
+                    </div>    
+                    <div class="col-12 col-md-6">
+                        <div class="form-group">
+                            <label for="">Feeling</label>
+                            <textarea name="feeling" id="" cols="30" rows="10" class="form-control"></textarea>
+                        </div>
+                    </div>    
+                    <div class="col-12 col-md-6">
+                        <div class="form-group">
+                            <label for="">Symptoms</label>
+                            <textarea name="symptoms" id="" cols="30" rows="10" class="form-control"></textarea>
+                        </div>
+                    </div>    
+                    <div class="col-12">
+                        <button type="submit" class="btn btn-primary w-100 btn-lg">Create</button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+         
     </div>
-    
 </body>
 </html>
 

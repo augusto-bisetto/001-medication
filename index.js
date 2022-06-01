@@ -24,9 +24,11 @@ mongoose.connect(mongoDbURI)
 
 require('./models/User')
 require('./models/MedicalRecords')
+require('./models/Allergies')
 
 
  app.use(require('./routes/frontend'))
+ app.use(require('./routes/allergies'))
 
 const frontendRoutes = require('./routes/frontend')
 

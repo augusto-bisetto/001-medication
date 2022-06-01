@@ -18,15 +18,7 @@ router.post('/surgeries', async (req,res) => {
   router.get('/surgeries/:id', () => {
     
   })
-
-  router.post('/allergies', async (req,res) => {
-    await Doctor.create(req.body)
-    res.render('allergies', {})
-  })
   
-  router.get('/allergies', (req,res) => {
-    res.render('allergies', {})
-  })
   
   router.get('/allergies/:id', () => {
     
