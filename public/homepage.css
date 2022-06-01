@@ -19,7 +19,6 @@ input{
     margin-left: 20px;
 }
 
-
 /* --------------------------------- */
 
 .surgeries{
@@ -29,6 +28,7 @@ input{
     box-shadow: none;
     border-radius: 10px;
     margin-bottom: 10px;
+    display: block;
 }
 
 .allergies{
@@ -37,6 +37,8 @@ input{
     border-color: #F8D377;
     box-shadow: none;
     border-radius: 10px;
+    margin-bottom: 10px;
+    display: block;
 }
 
 .immunizations{
@@ -53,6 +55,7 @@ input{
     border-color: #8561D1;
     box-shadow: none;
     border-radius: 10px;
+    display: block;
 }
 
 .col{
@@ -60,4 +63,6 @@ input{
     border-radius: 20px;
 }
 
-
+.card-header{
+    margin-bottom: 10px;
+}
