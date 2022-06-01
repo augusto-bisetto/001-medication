@@ -25,6 +25,7 @@ mongoose.connect(mongoDbURI)
 require('./models/User')
 require('./models/MedicalRecords')
 require('./models/Allergies')
+require('./models/Appointment')
 
 
  app.use(require('./routes/frontend'))

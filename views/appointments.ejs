@@ -39,12 +39,57 @@
 
     
     <div id='calendar-container'>
+      <div class="form-add-event d-none">
+        <form action="" method="post">
+          <div class="row">
+            <div class="col-12">
+              <div class="form-group">
+                <label for="description">Visit type</label>
+                <input type="text" class="form-control" id="description" name="description" placeholder="description">
+              </div>
+            </div>
+            <div class="col-12 col-md-6">
+              <div class="form-group">
+                <label for="start">Start</label>
+                <input type="datetime-local" class="form-control" id="start" name="start" placeholder="start">
+              </div>
+            </div>
+            <div class="col-12 col-md-6">
+              <div class="form-group">
+                <label for="end">End</label>
+                <input type="datetime-local" class="form-control" id="end" name="end" placeholder="end">
+              </div>
+            </div>
+            <div class="col-12 col-md-6">
+              <div class="form-group">
+                <label for="url">URL Meet</label>
+                <input type="text" name="url" class="form-control">
+              </div>
+            </div>
+            <div class="col-12 col-md-6">
+              <div class="form-group">
+                <label for="url">Doctor</label>
+                <select name="" id="" class="form-control">
+                  <% doctors.forEach(doctor => { %>
+                    <option value="<%=  doctor.id %>"> <%= doctor.name  %> <%= doctor.surname  %></option>
+                  <% }) %>
+                </select>
+              </div>
+            </div>
+            <div class="col-12">
+              <button type="submit" class="btn btn-primary">Create</button>
+            </div>
+          </div>
+        </form>
+      </div>
       <div id='calendar'></div>
     </div>
     <div id='calendar'></div>
     <script src='/Calendar/main.min.js'></script>
     <script>
-      document.addEventListener('DOMContentLoaded', function() {
+      // ciaooo
+      const appointments = <%- JSON.stringify(appointments)  %>;
+    document.addEventListener('DOMContentLoaded', function() {
     var Calendar = FullCalendar.Calendar;
     var Draggable = FullCalendar.Draggable;
 
@@ -90,19 +135,8 @@
       addEventButton: {
         text: 'add event...',
         click: function() {
-          var dateStr = prompt('Enter a date in YYYY-MM-DD format');
-          var date = new Date(dateStr + 'T00:00:00'); // will be in local time
-
-          if (!isNaN(date.valueOf())) { // valid?
-            calendar.addEvent({
-              title: 'dynamic event',
-              start: date,
-              allDay: true
-            });
-            alert('Great. Now, update your database...');
-          } else {
-            alert('Invalid date.');
-          }
+          const form = document.querySelector('.form-add-event');
+          form.classList.toggle('d-none');
         }
       }
 },
@@ -129,25 +163,16 @@
       dayMaxEventRows: true, 
       editable: true,
       dayMaxEvents: true,
-      events: [
-      {
-      title  : 'event1',
-      start  : '2022-05-01T12:30:00',
-      allDay : false, // will make the time show
-      dayMaxEventRows: 6
-      },
-      {
-      title  : 'event2',
-      start  : '2022-05-01T12:30:00',
-      allDay : false // will make the time show
-      },
-      {
-      title  : 'event3',
-      start  : '2022-05-01T12:30:00',
-      allDay : false // will make the time show
-      }
-      
-    ]
+      events:  appointments.map(a => (
+        {
+          title: a.description,
+          start: a.start,
+          end: a.end,
+          url: a.url,
+          doctor: a.doctor,
+          id: a.id
+        }
+      ))
     });
     
     calendar.render();

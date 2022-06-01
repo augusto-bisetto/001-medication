@@ -1,6 +1,7 @@
 const express = require('express')
 const mongoose = require('mongoose')
 const User = mongoose.model('user')
+const Appointment = mongoose.model('appointments')
 
 
 const router = express.Router()
@@ -65,14 +66,32 @@ router.get('/sign-up/:id', () => {
 })
 
 router.post('/appointments', async (req,res) => {
-    await Doctor.create(req.body)
-    res.render('appointments', {})  
+  if (!req.session.user){
+    return res.redirect('/')
+  }
+  await Appointment.create({
+    ...req.body,
+    patient: req.session.user._id
+  })
+  res.redirect('/appointments')  
 })
 
-router.get('/appointments', (req,res) => {
+router.get('/appointments', async (req,res) => {
   // if (req.session.user){
+    if (!req.session.user){
+      return res.redirect('/')
+    }
+    const appointments = await Appointment.find({
+      patient: req.session.user._id
+    }).lean()
+    const doctors = await User.find({
+      type:'doctor'
+    }).lean()
+
     res.render('appointments', {
-      user: req.session.user
+      user: req.session.user,
+      doctors,
+      appointments
     })
 })
 
