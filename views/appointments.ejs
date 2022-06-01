@@ -62,6 +62,51 @@
     });
     
     var calendar = new Calendar(calendarEl, {
+      timeZone: 'UTC',
+      initialView: 'dayGridMonth',
+      headerToolbar: {
+      left: 'dayGridMonth,timeGridWeek,timeGridDay custom1',
+      center: 'addEventButton',
+      right: 'custom2 prevYear,prev,next,nextYear'
+    },
+      footerToolbar: {
+      left: 'custom1,custom2',
+      center: '',
+      right: 'prev,next'
+    },
+      customButtons: {
+      custom1: {
+        text: 'custom 1',
+          click: function() {
+            alert('clicked custom button 1!');
+        }
+      },
+      custom2: {
+        text: 'custom 2',
+        click: function() {
+          alert('clicked custom button 2!');
+        }
+      },
+      addEventButton: {
+        text: 'add event...',
+        click: function() {
+          var dateStr = prompt('Enter a date in YYYY-MM-DD format');
+          var date = new Date(dateStr + 'T00:00:00'); // will be in local time
+
+          if (!isNaN(date.valueOf())) { // valid?
+            calendar.addEvent({
+              title: 'dynamic event',
+              start: date,
+              allDay: true
+            });
+            alert('Great. Now, update your database...');
+          } else {
+            alert('Invalid date.');
+          }
+        }
+      }
+},
+      
       eventClick: function(info) {
       var eventObj = info.event;
 
@@ -78,13 +123,10 @@
         alert('Clicked ' + eventObj.title);
       }
     },
-      timeZone: 'UTC',
+
+      weekNumbers: true,
+      navLinks: true,
       dayMaxEventRows: true, 
-      headerToolbar: {
-        left: 'prev,next today',
-        center: 'title',
-        right: 'dayGridMonth,timeGridWeek,timeGridDay' 
-      },
       editable: true,
       dayMaxEvents: true,
       events: [

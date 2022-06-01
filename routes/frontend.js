@@ -9,8 +9,12 @@ const router = express.Router()
 router.get('/', async (req,res) => {
   
   const user = req.session.user
+  const doctors = await User.find({
+    type:'doctor'
+  }).lean()
   res.render('homepage', {
-    user:user
+    user:user,
+    doctors
   })
 })
 
