@@ -12,6 +12,16 @@ strong{
 }
 
 /* --------------------------------- */
+.row{
+    margin-bottom: 20px;
+    margin-right: 20px;
+}
+.fa-hospital{
+    float: left;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
 .appointments{
     color: #8561D1;
 }
@@ -23,6 +33,7 @@ strong{
     border-radius: 10px;
     margin-bottom: 10px;
     display: block;
+    overflow: hidden;
 }
 .fa-syringe{
     color: #3F88AE;
@@ -38,6 +49,10 @@ strong{
     margin-bottom: 10px;
     display: block;
 }
+.fa-virus{
+    color: #F8D377;
+    float: left;
+}
 
 .immunizations{
     background-color: #61D3A4;
@@ -45,6 +60,10 @@ strong{
     border-color: #61D3A4;
     box-shadow: none;
     border-radius: 10px;
+}
+.fa-prescription-bottle-medical{
+    color: #61D3A4;
+    float: left;
 }
 
 .upcomingE{
