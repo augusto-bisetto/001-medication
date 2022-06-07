@@ -33,6 +33,7 @@
         <div class="container px-4 overflow-hidden">
           <div class="row g-2 align-items-center">
             <div class="col-12">
+              <i class="fa-solid fa-hospital fa-7x"></i>
               <h1>Health Application</h1>
               <p><strong> are you feeling today</strong>  </p> 
               <input type="text" id="name" name="name"><br><br>
@@ -41,19 +42,20 @@
 
 
             <div class="row g-2 align-items-start">
-              <div class="col-3 p-3 border">
+              <div class="col-3 p-3 border rounded">
                 <h2>medical records</h2>
+                <i class="fa-solid fa-syringe fa-2xl"></i>
                 <button class="surgeries" onclick="window.location.href='/surgeries'"><h4>surgeries</h4></button>
                 <button class="allergies" onclick="window.location.href='/allergies'"><h4>allergies</h4></button>
                 <button class="immunizations" onclick="window.location.href='/immunizations'"><h4>immunizations</h4></button>
 
               </div>
 
-              <div class="col-5 p-3 border">
+              <div class="col-5 p-3 border rounded">
                 <h2>Pathology Results</h2>
                 
                </div>
-              <div class="col-4 p-3 border appointments">
+              <div class="col-4 p-3 border rounded appointments">
                 <h2>your appointments</h2>
                 <p>upcoming appointments</p>
                  <!-- connect to appointments database -->
@@ -62,29 +64,29 @@
             </div>
            
            
-            <div class="row g-2 align-items-center">
-              <div class="col-12 p-3 border">
+            <div class="row g-2 align-items-start">
+              <div class="col-12 p-3 border rounded">
                 <h2>Prescriptions</h2>
                 <div class="card" style="width: 18rem;">
                   <div class="card-body">
-                    <h5 class="card-title"> <%= prescription.name %></h5>
-                    <p class="card-text"> <%= prescription.docComment %></p>
+                    <h5 class="card-title"> prescription.name </h5>
+                    <p class="card-text"> prescription.docComment </p>
                     <a onclick="window.location.href='/'" class="btn btn-primary">view deatails</a>
                   </div>
                   </div>
 
                   <div class="card" style="width: 18rem;">
                     <div class="card-body">
-                      <h5 class="card-title"> <%= prescription.medication  %></h5>
-                      <p class="card-text"> <%= prescription.docComment %></p>
+                      <h5 class="card-title"> prescription.medication </h5>
+                      <p class="card-text"> prescription.docComment </p>
                       <a onclick="window.location.href='/'" class="btn btn-primary">view deatails</a>
                     </div>
                     </div>
 
                     <div class="card" style="width: 18rem;">
                       <div class="card-body">
-                        <h5 class="card-title"> <%= prescription.name %></h5>
-                        <p class="card-text"> <%= prescription.docComment %></p>
+                        <h5 class="card-title"> prescription.name </h5>
+                        <p class="card-text"> prescription.docComment </p>
                         <a onclick="window.location.href='/'" class="btn btn-primary">view deatails</a>
                       </div>
                       </div>
@@ -92,12 +94,12 @@
               </div>
             </div>
 
-            <div class="row g-2 align-items-center">
-                <div class="col-12">
+            <div class="row g-2 align-items-start">
+                <div class="col-12 p-3 border rounded">
                  <h2>Doctors</h2>
                  <% doctors.forEach(doctor => { %>                 
                   <div class="col-12">
-                    <div class="card">
+                    <div class="card doctor">
                       <div class="card-header">
                         <%= doctor.name %> 
                         <%= doctor.surname %> 
