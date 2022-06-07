@@ -1,9 +1,8 @@
 const mongoose = require('mongoose')
 
 const PathologyResult = new mongoose.Schema({
-  PatientDetails: String,
-  FullBloodCount: String,
-  PreliminaryReport: String,
+  typology: String,
+  result: String,
 })
 
 

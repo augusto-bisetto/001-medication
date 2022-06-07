@@ -10,6 +10,11 @@
     <script src="https://kit.fontawesome.com/b886c2081b.js" crossorigin="anonymous"></script>
 </head>
 <body>
+
+
+
+
+
     <% if (user) { %>
       <h3> You are logged in as <%= (user.name) %></h3>
     <% }else{ %>
@@ -23,62 +28,72 @@
 
 
 
-    <h1>Health Application</h1>
+    
+
+        <div class="container px-4 overflow-hidden">
+          <div class="row g-2 align-items-center">
+            <div class="col-12">
+              <h1>Health Application</h1>
+              <p><strong> are you feeling today</strong>  </p> 
+              <input type="text" id="name" name="name"><br><br>
+            </div>
+          </div>
 
 
-    <p><strong> are you feeling today</strong>  </p> 
-    <input type="text" id="name" name="name"><br><br>
-
-        <div class="container">
-            <div class="row align-items-start">
-              <div class="col-5">
-                <h2>your paramenters</h2>
-              </div>
-              <div class="col-3">
+            <div class="row g-2 align-items-start">
+              <div class="col-3 p-3 border">
                 <h2>medical records</h2>
                 <button class="surgeries" onclick="window.location.href='/surgeries'"><h4>surgeries</h4></button>
                 <button class="allergies" onclick="window.location.href='/allergies'"><h4>allergies</h4></button>
                 <button class="immunizations" onclick="window.location.href='/immunizations'"><h4>immunizations</h4></button>
 
               </div>
-              <div class="col-4">
+
+              <div class="col-5 p-3 border">
+                <h2>Pathology Results</h2>
+                
+               </div>
+              <div class="col-4 p-3 border appointments">
                 <h2>your appointments</h2>
                 <p>upcoming appointments</p>
                  <!-- connect to appointments database -->
                 <button class="upcomingE" onclick="window.location.href='/appointments'">see all appointments</button>
               </div>
             </div>
-
-            
            
            
-            <div class="row align-items-center">
-              <div class="col-3">
-               <h2>Pathology Results</h2>
-               <p class="pathRes">{{pathResult}}</p>
-              </div>
-              <div class="col-5">
+            <div class="row g-2 align-items-center">
+              <div class="col-12 p-3 border">
                 <h2>Prescriptions</h2>
                 <div class="card" style="width: 18rem;">
                   <div class="card-body">
-                    <h5 class="card-title">prescription.name</h5>
-                    <p class="card-text">prescription.docComment</p>
+                    <h5 class="card-title"> <%= prescription.name %></h5>
+                    <p class="card-text"> <%= prescription.docComment %></p>
                     <a onclick="window.location.href='/'" class="btn btn-primary">view deatails</a>
                   </div>
-                  <!-- <div class="card" style="width: 18rem;">
-                    <img src="..." class="card-img-top" alt="...">
+                  </div>
+
+                  <div class="card" style="width: 18rem;">
                     <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div> -->
-                </div>
-                <p class="prescriptions">{{prescriptions}}</p>
+                      <h5 class="card-title"> <%= prescription.medication  %></h5>
+                      <p class="card-text"> <%= prescription.docComment %></p>
+                      <a onclick="window.location.href='/'" class="btn btn-primary">view deatails</a>
+                    </div>
+                    </div>
+
+                    <div class="card" style="width: 18rem;">
+                      <div class="card-body">
+                        <h5 class="card-title"> <%= prescription.name %></h5>
+                        <p class="card-text"> <%= prescription.docComment %></p>
+                        <a onclick="window.location.href='/'" class="btn btn-primary">view deatails</a>
+                      </div>
+                      </div>
+
               </div>
             </div>
 
-            <div class="row align-items-center">
-                <div class="col-8">
+            <div class="row g-2 align-items-center">
+                <div class="col-12">
                  <h2>Doctors</h2>
                  <% doctors.forEach(doctor => { %>                 
                   <div class="col-12">
@@ -92,6 +107,7 @@
                   <% }) %>
                 </div>
             </div>
+        </div>
 
 </body>
 </html>
