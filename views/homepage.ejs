@@ -13,7 +13,7 @@
 
 
 
-
+<!-- sign up/login -->
 
     <% if (user) { %>
       <h3> You are logged in as <%= (user.name) %></h3>
@@ -28,52 +28,57 @@
 
 
 
-    
+    <!-- homepage start -->
         <div class="container px-4 overflow-hidden">
           <i class="fa-solid fa-hospital fa-7x"></i>
           <div class="row g-2 align-items-center">
             <div class="col-12">
               <h1>Health Application</h1>
-              <p><strong> are you feeling today</strong>  </p> 
+              <p><strong> are you feeling today?</strong>  </p> 
               <input type="text" id="name" name="name"><br><br>
             </div>
           </div>
 
-
+          <!-- first row -->
             <div class="row g-2 align-items-start">
 
+              <!-- medical records -->
               <div class="col-3 p-3 border rounded">
                 <div class="wrapper">
                   <i class="fa-solid fa-book-medical fa-3x"></i>
                   <h2>medical records</h2>
                 </div>
 
-                
+                <!-- surgery -->
                 <div class="wrapper">
                   <i class="fa-solid fa-syringe fa-2xl"></i>
-                  <a onclick="window.location.href='/surgeries'" class="surgeries"><h4>surgeries</h4></a>
+                  <a onclick="window.location.href='/surgeries'" class="btn btn-primary surgeries"><h4>surgeries</h4></a>
                 </div>
 
+                <!-- allergies -->
                 <div class="wrapper">
                   <i class="fa-solid fa-virus fa-2xl"></i>
-                <button class="allergies" onclick="window.location.href='/allergies'"><h4>allergies</h4></button>
+                  <button class="allergies" onclick="window.location.href='/allergies'"><h4>allergies</h4></button>
                 </div>
                 
-              <div class="wrapper">
-                <i class="fa-solid fa-prescription-bottle-medical fa-2xl"></i>
-                <button class="immunizations" onclick="window.location.href='/immunizations'"><h4>immunizations</h4></button>
-              </div>
+                <!-- immunizations -->  
+                <div class="wrapper">
+                  <i class="fa-solid fa-prescription-bottle-medical fa-2xl"></i>
+                  <button class="immunizations" onclick="window.location.href='/immunizations'"><h4>immunizations</h4></button>
+                </div>
                 
-
+              <!-- end of medical records -->
               </div>
 
+              <!-- pathology results -->
               <div class="col-5 p-3 border rounded">
                 <div class="wrapper">
                   <i class="fa fa-vial fa-2xl"></i>
                   <h2>Pathology Results</h2>
+                </div>
               </div>
-                
-               </div>
+
+              <!-- appointments -->
               <div class="col-4 p-3 border rounded">
                 <div class="wrapper">
                   <i class="fa-solid fa-calendar fa-2xl"></i>
@@ -84,9 +89,11 @@
                  <!-- connect to appointments database -->
                 <button class="upcomingE" onclick="window.location.href='/appointments'">see all appointments</button>
               </div>
+
+              <!-- end of row -->
             </div>
            
-           
+           <!-- start of second row -->
             <div class="row g-2 align-items-start">
               <div class="col-12 p-3 border rounded">
 
@@ -112,15 +119,17 @@
                     </div>
                     </div>
 
-                    <div class="card" style="width: 18rem;">
-                      <div class="card-body">
-                        <h5 class="card-title"> prescription.name </h5>
-                        <p class="card-text"> prescription.docComment </p>
-                        <a onclick="window.location.href='/'" class="btn btn-primary">view deatails</a>
-                      </div>
-                      </div>
+                  <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                      <h5 class="card-title"> prescription.name </h5>
+                      <p class="card-text"> prescription.docComment </p>
+                      <a onclick="window.location.href='/'" class="btn btn-primary">view deatails</a>
+                    </div>
+                  </div>
 
               </div>
+
+            <!-- end or row -->
             </div>
 
             <div class="row g-2 align-items-start">
