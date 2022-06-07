@@ -5,6 +5,7 @@ h2{
 
 h3{
     margin-left: 20px;
+    align-items: right;
 }
 
 strong{
@@ -14,8 +15,12 @@ strong{
 /* --------------------------------- */
 .row{
     margin-bottom: 20px;
+}
+
+.col{
     margin-right: 20px;
 }
+
 .fa-hospital{
     float: left;
     margin-right: 10px;
@@ -75,10 +80,6 @@ strong{
     display: block;
 }
 
-.col{
-    margin-left: 20px;
-    margin-left: auto;
-}
 
 .card-header{
     margin-bottom: 10px;
