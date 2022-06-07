@@ -41,28 +41,45 @@
 
 
             <div class="row g-2 align-items-start">
+
               <div class="col-3 p-3 border rounded">
-                <i class="fa-solid fa-book-medical fa-3x"></i>
-                <h2>medical records</h2>
-                <i class="fa-solid fa-syringe fa-2xl"></i>
-                <button class="surgeries" onclick="window.location.href='/surgeries'"><h4>surgeries</h4></button>
+                <div class="wrapper">
+                  <i class="fa-solid fa-book-medical fa-3x"></i>
+                  <h2>medical records</h2>
+                </div>
 
-                <i class="fa-solid fa-virus fa-2xl"></i>
+                
+                <div class="wrapper">
+                  <i class="fa-solid fa-syringe fa-2xl"></i>
+                  <button class="surgeries" onclick="window.location.href='/surgeries'"><h4>surgeries</h4></button>
+                </div>
+
+                <div class="wrapper">
+                  <i class="fa-solid fa-virus fa-2xl"></i>
                 <button class="allergies" onclick="window.location.href='/allergies'"><h4>allergies</h4></button>
-
+                </div>
+                
+              <div class="wrapper">
                 <i class="fa-solid fa-prescription-bottle-medical fa-2xl"></i>
                 <button class="immunizations" onclick="window.location.href='/immunizations'"><h4>immunizations</h4></button>
+              </div>
+                
 
               </div>
 
               <div class="col-5 p-3 border rounded">
-                <i class="fa-solid fa-vial fa-2xl"></i>
-                <h2>Pathology Results</h2>
+                <div class="wrapper">
+                  <i class="fa fa-vial fa-2xl"></i>
+                  <h2>Pathology Results</h2>
+              </div>
                 
                </div>
               <div class="col-4 p-3 border rounded">
-                <i class="fa-solid fa-calendar fa-2xl"></i>
+                <div class="wrapper">
+                  <i class="fa-solid fa-calendar fa-2xl"></i>
                 <h2>your appointments</h2>
+              </div>
+                
                 <p>upcoming appointments</p>
                  <!-- connect to appointments database -->
                 <button class="upcomingE" onclick="window.location.href='/appointments'">see all appointments</button>
@@ -72,8 +89,13 @@
            
             <div class="row g-2 align-items-start">
               <div class="col-12 p-3 border rounded">
-                <i class="fa-solid fa-prescription-bottle fa-2xl"></i>
+
+                <div class="wrapper">
+                  <i class="fa-solid fa-prescription-bottle fa-2xl"></i>
                 <h2>Prescriptions</h2>
+                </div>
+
+                
                 <div class="card" style="width: 18rem;">
                   <div class="card-body">
                     <h5 class="card-title"> prescription.name </h5>
@@ -103,8 +125,12 @@
 
             <div class="row g-2 align-items-start">
                 <div class="col-12 p-3 border rounded">
-                  <i class="fa-solid fa-user-doctor fa-2xl"></i>
+
+                  <div class="wrapper">
+                    <i class="fa-solid fa-user-doctor fa-2xl"></i>
                  <h2>Doctors</h2>
+                  </div>
+                  
                  <% doctors.forEach(doctor => { %>                 
                   <div class="col-12">
                     <div class="card doctor">

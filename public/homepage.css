@@ -1,11 +1,19 @@
 
 h2{
-    text-transform: uppercase;
+    text-transform: uppercase; 
+    margin-bottom: 0;
+    margin-top: 4px;
+    margin-left: 10px;    
 }
 
 h3{
     margin-left: 20px;
     align-items: right;
+}
+h4{
+    margin-bottom: 0;
+    margin-top: 4px;
+    margin-left: 10px; 
 }
 
 strong{
@@ -35,11 +43,11 @@ strong{
     border-radius: 10px;
     margin-bottom: 10px;
     display: block;
-    overflow: hidden;
 }
 .fa-syringe{
     color: #3F88AE;
-    float: left;
+    margin-right: 5px;
+    
 }
 
 .allergies{
@@ -53,7 +61,7 @@ strong{
 }
 .fa-virus{
     color: #F8D377;
-    float: left;
+    margin-right: 5px;
 }
 
 .immunizations{
@@ -65,11 +73,15 @@ strong{
 }
 .fa-prescription-bottle-medical{
     color: #61D3A4;
-    float: left;
+    margin-right: 5px;
 }
 
+.wrapper {
+    display: flex;
+    align-items:center;
+    }
 .fa-vial{
-    float: left;
+    margin-right: 5px;
 }
 
 .upcomingE{
