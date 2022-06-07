@@ -27,9 +27,6 @@ strong{
     margin-top: 10px;
 }
 
-.appointments{
-    color: #8561D1;
-}
 .surgeries{
     background-color: #3F88AE;
     color: white;
@@ -71,6 +68,10 @@ strong{
     float: left;
 }
 
+.fa-vial{
+    float: left;
+}
+
 .upcomingE{
     background-color: #8561D1;
     color: white;
@@ -79,13 +80,23 @@ strong{
     border-radius: 10px;
     display: block;
 }
+.fa-calendar{
+    float: left;
+}
 
 
+.fa-prescription-bottle{
+    float: left;
+}
 .card-header{
     margin-bottom: 10px;
 }
 
+
 .doctor{
     margin-top: 10px;
     margin-bottom: 10px;
+}
+.fa-user-doctor{
+    float: left;
 }
