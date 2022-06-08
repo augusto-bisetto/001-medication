@@ -12,28 +12,38 @@
 <body>
     <h1>surgeries</h1>
 
-    <div class="row g-2 align-items-start">
+    <div class="row">
+        <% surgeries.forEach(surgery => { %>                 
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <%= surgery.name %> 
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-12">
+                                <h6><b>Description</b></h6>
+                                <p class="card-text"><%= surgery.description %></p>    
+                            </div>
+                            <div class="col-6">
+                                <h6><b>Symptoms</b></h6>
+                                <p><%= surgery.symptoms %> </p>
 
-        <div class="row">
-            <% allergies.forEach(allergy => { %>                 
-                <div class="col-12">
-                    <div class="card">
-                        <div class="card-header">
-                            <%= allergy.name %> 
+                            </div>
+                            <div class="col-6">
+                                <h6><b>Feelings</b></h6>
+                                <p><%= surgery.feeling %> </p>
+
+                            </div>
                         </div>
-                        <div class="card-body">
-                            <div class="row">
-                                <div class="col-12">
-                                    <h6><b>Description</b></h6>
-                                    <p class="card-text"><%= allergy.description %></p>    
-                                </div>
-                                <div class="col-6">
-                                    <h6><b>Symptoms</b></h6>
-                                    <p><%= allergy.symptoms %> </p>
-    
-                                </div>
-
+                    </div>
+                </div>
+            </div>    
+        <% }) %>
+       
     </div>
+   
+        
 
 </body>
 </html>
