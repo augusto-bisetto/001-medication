@@ -17,31 +17,23 @@
 
     <% if (user) { %>
       <h3> You are logged in as <%= (user.name) %></h3>
-    <% }else{ %>
-      <h3>Not logged in</h3>
-    <%}%>
 
-    <button class="sign-up"onclick="window.location.href='/sign-up'">SIGN UP</button>
-    <button class="sign-in"onclick="window.location.href='/sign-in'">SIGN IN</button>
-    <button class="sign-out"onclick="window.location.href='/sign-out'">SIGN OUT</button>
-    <button class="complete-account"onclick="window.location.href='/complete-account'">Complete your Account</button>
-
-
-
-    <!-- homepage start -->
-        <div class="container px-4 overflow-hidden">
-          <i class="fa-solid fa-hospital fa-7x"></i>
-          <div class="row g-2 align-items-center">
-            <div class="col-12">
-              <h1>Health Application</h1>
-              <p><strong> are you feeling today?</strong>  </p> 
-              <input type="text" id="name" name="name"><br><br>
-            </div>
+      <!-- homepage start -->
+      <div class="container px-4 overflow-hidden">
+        <i class="fa-solid fa-hospital fa-7x"></i>
+        <div class="row g-2 align-items-center">
+          <div class="col-12">
+            <h1>Health Application</h1>
+            <p><strong> are you feeling today?</strong>  </p> 
+            <input type="text" id="name" name="name"><br><br>
           </div>
+          <button class="sign-out"onclick="window.location.href='/sign-out'">SIGN OUT</button>
+        </div>
 
-          <!-- first row -->
-            <div class="row g-2 align-items-start">
+        <!-- first row -->
+          <div class="row g-2 align-items-start">
 
+<<<<<<< HEAD
               <!-- medical records -->
               <div class="col-3 p-3 border rounded">
                 <div class="wrapper">
@@ -52,7 +44,7 @@
                 <!-- surgery -->
                 <div class="wrapper">
                   <i class="fa-solid fa-syringe fa-2xl"></i>
-                  <a onclick="window.location.href='/surgeries'" class="btn btn-primary surgeries"><h4>surgeries</h4></a>
+                  <a onclick="window.location.href='/surgeries'" class="btn btn-outline-primary surgeries"><h4>surgeries</h4></a>
                 </div>
 
                 <!-- allergies -->
@@ -68,91 +60,126 @@
                 </div>
                 
               <!-- end of medical records -->
+            
+
+              <!-- surgery -->
+              <div class="wrapper">
+                <i class="fa-solid fa-syringe fa-2xl"></i>
+                <a onclick="window.location.href='/surgeries'" class="btn btn-primary surgeries"><h4>surgeries</h4></a>
               </div>
 
-              <!-- pathology results -->
-              <div class="col-5 p-3 border rounded">
-                <div class="wrapper">
-                  <i class="fa fa-vial fa-2xl"></i>
-                  <h2>Pathology Results</h2>
-                </div>
+              <!-- allergies -->
+              <div class="wrapper">
+                <i class="fa-solid fa-virus fa-2xl"></i>
+                <button class="allergies" onclick="window.location.href='/allergies'"><h4>allergies</h4></button>
               </div>
-
-              <!-- appointments -->
-              <div class="col-4 p-3 border rounded">
-                <div class="wrapper">
-                  <i class="fa-solid fa-calendar fa-2xl"></i>
-                <h2>your appointments</h2>
+              
+              <!-- immunizations -->  
+              <div class="wrapper">
+                <i class="fa-solid fa-prescription-bottle-medical fa-2xl"></i>
+                <button class="immunizations" onclick="window.location.href='/immunizations'"><h4>immunizations</h4></button>
               </div>
-                
-                <p>upcoming appointments</p>
-                 <!-- connect to appointments database -->
-                <button class="upcomingE" onclick="window.location.href='/appointments'">see all appointments</button>
-              </div>
-
-              <!-- end of row -->
+              
+            <!-- end of medical records -->
             </div>
-           
-           <!-- start of second row -->
-            <div class="row g-2 align-items-start">
-              <div class="col-12 p-3 border rounded">
 
-                <div class="wrapper">
-                  <i class="fa-solid fa-prescription-bottle fa-2xl"></i>
-                <h2>Prescriptions</h2>
+            <!-- pathology results -->
+            <div class="col-5 p-3 border rounded">
+              <div class="wrapper">
+                <i class="fa fa-vial fa-2xl"></i>
+                <h2>Pathology Results</h2>
+              </div>
+            </div>
+
+            <!-- appointments -->
+            <div class="col-4 p-3 border rounded">
+              <div class="wrapper">
+                <i class="fa-solid fa-calendar fa-2xl"></i>
+              <h2>your appointments</h2>
+            </div>
+              
+              <p>upcoming appointments</p>
+               <!-- connect to appointments database -->
+              <button class="upcomingE" onclick="window.location.href='/appointments'">see all appointments</button>
+            </div>
+
+            <!-- end of row -->
+          </div>
+         
+         <!-- start of second row -->
+          <div class="row g-2 align-items-start">
+            <div class="col-12 p-3 border rounded">
+
+              <div class="wrapper">
+                <i class="fa-solid fa-prescription-bottle fa-2xl"></i>
+              <h2>Prescriptions</h2>
+              </div>
+
+              
+              <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                  <h5 class="card-title"> prescription.name </h5>
+                  <p class="card-text"> prescription.docComment </p>
+                  <a onclick="window.location.href='/'" class="btn btn-primary">view deatails</a>
+                </div>
                 </div>
 
-                
+                <div class="card" style="width: 18rem;">
+                  <div class="card-body">
+                    <h5 class="card-title"> prescription.medication </h5>
+                    <p class="card-text"> prescription.docComment </p>
+                    <a onclick="window.location.href='/'" class="btn btn-primary">view deatails</a>
+                  </div>
+                  </div>
+
                 <div class="card" style="width: 18rem;">
                   <div class="card-body">
                     <h5 class="card-title"> prescription.name </h5>
                     <p class="card-text"> prescription.docComment </p>
                     <a onclick="window.location.href='/'" class="btn btn-primary">view deatails</a>
                   </div>
-                  </div>
-
-                  <div class="card" style="width: 18rem;">
-                    <div class="card-body">
-                      <h5 class="card-title"> prescription.medication </h5>
-                      <p class="card-text"> prescription.docComment </p>
-                      <a onclick="window.location.href='/'" class="btn btn-primary">view deatails</a>
-                    </div>
-                    </div>
-
-                  <div class="card" style="width: 18rem;">
-                    <div class="card-body">
-                      <h5 class="card-title"> prescription.name </h5>
-                      <p class="card-text"> prescription.docComment </p>
-                      <a onclick="window.location.href='/'" class="btn btn-primary">view deatails</a>
-                    </div>
-                  </div>
-
-              </div>
-
-            <!-- end or row -->
-            </div>
-
-            <div class="row g-2 align-items-start">
-                <div class="col-12 p-3 border rounded">
-
-                  <div class="wrapper">
-                    <i class="fa-solid fa-user-doctor fa-2xl"></i>
-                 <h2>Doctors</h2>
-                  </div>
-                  
-                 <% doctors.forEach(doctor => { %>                 
-                  <div class="col-12">
-                    <div class="card doctor">
-                      <div class="card-header">
-                        <%= doctor.name %> 
-                        <%= doctor.surname %> 
-                      </div>
-                    </div>
-                  </div>    
-                  <% }) %>
                 </div>
+
             </div>
-        </div>
+
+          <!-- end or row -->
+          </div>
+
+          <div class="row g-2 align-items-start">
+              <div class="col-12 p-3 border rounded">
+
+                <div class="wrapper">
+                  <i class="fa-solid fa-user-doctor fa-2xl"></i>
+               <h2>Doctors</h2>
+                </div>
+                
+               <% doctors.forEach(doctor => { %>                 
+                <div class="col-12">
+                  <div class="card doctor">
+                    <div class="card-header">
+                      <%= doctor.name %> 
+                      <%= doctor.surname %> 
+                    </div>
+                  </div>
+                </div>    
+                <% }) %>
+              </div>
+          </div>
+      </div>
+    <% }else{ %>
+      <h3>Not logged in</h3>
+      <button class="sign-up"onclick="window.location.href='/sign-up'">SIGN UP</button>
+      <button class="sign-in"onclick="window.location.href='/sign-in'">SIGN IN</button>
+    <%}%>
+
+  
+    
+
+    
+
+
+
+    
 
 </body>
 </html>
