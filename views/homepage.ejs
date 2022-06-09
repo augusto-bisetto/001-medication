@@ -16,10 +16,11 @@
 <!-- sign up/login -->
 
     <% if (user) { %>
-      <h3> You are logged in as <%= (user.name) %></h3>
+      <h3 class="logged"> You are logged in as <%= (user.name) %></h3>
 
       <!-- homepage start -->
       <div class="container px-4 overflow-hidden">
+        <button class="sign-out"onclick="window.location.href='/sign-out'">SIGN OUT</button>
         <i class="fa-solid fa-hospital fa-7x"></i>
         <div class="row g-2 align-items-center">
           <div class="col-12">
@@ -27,7 +28,6 @@
             <p><strong> are you feeling today?</strong>  </p> 
             <input type="text" id="name" name="name"><br><br>
           </div>
-          <button class="sign-out"onclick="window.location.href='/sign-out'">SIGN OUT</button>
         </div>
 
         <!-- first row -->
