@@ -16,11 +16,11 @@
 <!-- sign up/login -->
 
     <% if (user) { %>
-      <h3 class="logged"> You are logged in as <%= (user.name) %></h3>
+      <p class="logged"> You are logged in as <%= (user.name) %></p>
 
       <!-- homepage start -->
       <div class="container px-4 overflow-hidden">
-        <button class="sign-out"onclick="window.location.href='/sign-out'">SIGN OUT</button>
+        <a class="sign-out" onclick="window.location.href='/sign-out'">sign out</a>
         <i class="fa-solid fa-hospital fa-7x"></i>
         <div class="row g-2 align-items-center">
           <div class="col-12">
@@ -50,13 +50,13 @@
                 <!-- allergies -->
                 <div class="wrapper">
                   <i class="fa-solid fa-virus fa-2xl"></i>
-                  <button class="allergies" onclick="window.location.href='/allergies'"><h4>allergies</h4></button>
+                  <a class="btn btn-outline-primary allergies" onclick="window.location.href='/allergies'"><h4>allergies</h4></a>
                 </div>
                 
                 <!-- immunizations -->  
                 <div class="wrapper">
                   <i class="fa-solid fa-prescription-bottle-medical fa-2xl"></i>
-                  <button class="immunizations" onclick="window.location.href='/immunizations'"><h4>immunizations</h4></button>
+                  <a class=" btn btn-outline-primary immunizations" onclick="window.location.href='/immunizations'"><h4>immunizations</h4></a>
                 </div>
               </div>
               <!-- end of medical records -->
@@ -89,7 +89,7 @@
             </div>
             <p>upcoming appointments</p>
                <!-- connect to appointments database -->
-              <button class="upcomingE" onclick="window.location.href='/appointments'">see all appointments</button>
+              <a class="btn btn-outline-primary" href="/appointments"><h4>see all appointments</h4></a>
           </div>      
          </div>
 
@@ -158,8 +158,8 @@
       </div>
     <% }else{ %>
       <h3>Not logged in</h3>
-      <button class="sign-up"onclick="window.location.href='/sign-up'">SIGN UP</button>
-      <button class="sign-in"onclick="window.location.href='/sign-in'">SIGN IN</button>
+      <a class="sign-up"onclick="window.location.href='/sign-up'">sign up</a>
+      <a class="sign-in"onclick="window.location.href='/sign-in'">sign in</a>
     <%}%>
 
   

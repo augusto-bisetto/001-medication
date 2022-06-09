@@ -1,23 +1,50 @@
 
+@font-face {
+    font-family: heading ;
+    src: url(fonts/KronaOne-Regular.ttf);
+}
+
+@font-face {
+    font-family: body ;
+    src: url(fonts/Poppins-Medium.ttf);
+}
+
+h1{
+    font-family: heading;
+}
+
 h2{
-    text-transform: uppercase; 
     margin-bottom: 0;
     margin-top: 4px;
-    margin-left: 10px;    
+    margin-left: 10px; 
+    font-family: heading;   
 }
 
 h3{
     margin-left: 20px;
     align-items: right;
+    font-family: heading;
 }
+
 h4{
-    margin-bottom: 0;
-    margin-top: 4px;
-    margin-left: 10px; 
+    font-family: body;
+}
+
+h5{
+    font-family: body;
 }
 
 strong{
     color: #3F88AE;
+    font-family: body;
+}
+
+p{
+    font-family: body;
+}
+
+a{
+    font-family: body;
 }
 
 /* --------------------------------- */
@@ -29,7 +56,18 @@ strong{
     margin-right: 20px;
 }
 
+.logged{
+    text-align: right;
+   position:absolute;
+   top: 10;
+   right: 0;
+}
 
+/* .sign-out{
+    position:absolute;
+   bottom: 10;
+   Right: 0;
+} */
 
 .fa-hospital{
     float: left;
@@ -104,6 +142,7 @@ strong{
 }
 .card-header{
     margin-bottom: 10px;
+    font-family: body;
 }
 
 
