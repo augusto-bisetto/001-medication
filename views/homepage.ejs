@@ -34,7 +34,8 @@
           <div class="row g-2 align-items-start">
 
               <!-- medical records -->
-              <div class="col-3 p-3 border rounded">
+              <div class="col-3">
+                <div class=" p-3 border rounded">
                 <div class="wrapper">
                   <i class="fa-solid fa-book-medical fa-3x"></i>
                   <h2>medical records</h2>
@@ -57,29 +58,32 @@
                   <i class="fa-solid fa-prescription-bottle-medical fa-2xl"></i>
                   <button class="immunizations" onclick="window.location.href='/immunizations'"><h4>immunizations</h4></button>
                 </div>
-                
+              </div>
               <!-- end of medical records -->
               </div>
 
             <!-- pathology results -->
-            <div class="col-5 p-3 border rounded">
+            <div class="col-5">
+              <div class="p-3 border rounded">
               <div class="wrapper">
                 <i class="fa fa-vial fa-2xl"></i>
                 <h2>Pathology Results</h2>
               </div>
             </div>
+          </div>
 
             <!-- appointments -->
-            <div class="col-4 p-3 border rounded">
+            <div class="col-4">
+              <div class=" p-3 border rounded">
               <div class="wrapper">
                 <i class="fa-solid fa-calendar fa-2xl"></i>
               <h2>your appointments</h2>
             </div>
-              
-              <p>upcoming appointments</p>
+            <p>upcoming appointments</p>
                <!-- connect to appointments database -->
               <button class="upcomingE" onclick="window.location.href='/appointments'">see all appointments</button>
-            </div>
+          </div>      
+         </div>
 
             <!-- end of row -->
           </div>
@@ -93,8 +97,8 @@
               <h2>Prescriptions</h2>
               </div>
 
-              
-              <div class="card" style="width: 18rem;">
+              <div class="row">
+              <div class="card col-12 col-md-4">
                 <div class="card-body">
                   <h5 class="card-title"> prescription.name </h5>
                   <p class="card-text"> prescription.docComment </p>
@@ -102,7 +106,7 @@
                 </div>
                 </div>
 
-                <div class="card" style="width: 18rem;">
+                <div class="card col-12 col-md-4" >
                   <div class="card-body">
                     <h5 class="card-title"> prescription.medication </h5>
                     <p class="card-text"> prescription.docComment </p>
@@ -110,14 +114,14 @@
                   </div>
                   </div>
 
-                <div class="card" style="width: 18rem;">
+                <div class="card col-12 col-md-4">
                   <div class="card-body">
                     <h5 class="card-title"> prescription.name </h5>
                     <p class="card-text"> prescription.docComment </p>
                     <a onclick="window.location.href='/'" class="btn btn-primary">view deatails</a>
                   </div>
                 </div>
-
+              </div>
             </div>
 
           <!-- end or row -->
