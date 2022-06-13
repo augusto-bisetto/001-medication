@@ -1,10 +1,10 @@
 const mongoose = require('mongoose')
 
-const surgeriesSchema = new mongoose.Schema({
+const immunizationsSchema = new mongoose.Schema({
   name: String,
   description: String ,
-  time: String,
-  day: String,
+  dayDone: String,
+  dayExpire: String,
   patient: {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'user'
@@ -12,4 +12,4 @@ const surgeriesSchema = new mongoose.Schema({
 })
 
 
-mongoose.model('surgeries', surgeriesSchema)
+mongoose.model('immunizations', immunizationsSchema)

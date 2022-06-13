@@ -7,7 +7,76 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Ciao</h1>
+    <h1>immunizations</h1>
+
+    <div class="row">
+        <% immunizations.forEach(immunization => { %>                 
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <%= immunization.name %> 
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-12">
+                                <h6><b>Description</b></h6>
+                                <p class="card-text"><%= immunization.description %></p>    
+                            </div>
+                            <div class="col-6">
+                                <h6><b>When you have done it</b></h6>
+                                <p><%= immunization.dayDone %> </p>
+
+                            </div>
+                            <div class="col-6">
+                                <h6><b>When it expire</b></h6>
+                                <p><%= immunization.dayExpire %> </p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>    
+        <% }) %>
+        <% if (immunizations.length == 0) { %>
+            <h2>No vaccines added yet</h2>
+        <% } %>
+    </div>
+        <h2>Create new</h2>
+        <div class="card">
+            <div class="card-body">
+                <form action="" method="post" class="row mt-3">
+                    <div class="col-12 col-md-6">
+                        <div class="form-grup">
+                            <label for="name">Name</label>
+                            <input type="text" name="name" id="name" class="form-control">
+                        </div>
+                    </div>
+      
+                    <div class="col-12">
+                        <div class="form-group">
+                            <label for=""> Description</label>
+                            <textarea name="description" id="" cols="30" rows="10" class="form-control"></textarea>
+                        </div>
+                    </div>    
+                    <div class="col-12 col-md-6">
+                        <div class="form-group">
+                            <label for="">date you've done it</label>
+                            <textarea name="dayDone" id="" cols="30" rows="10" class="form-control"></textarea>
+                        </div>
+                    </div>    
+                    <div class="col-12 col-md-6">
+                        <div class="form-group">
+                            <label for="">date it expire</label>
+                            <textarea name="dayExpire" id="" cols="30" rows="10" class="form-control"></textarea>
+                        </div>
+                    </div>    
+                    <div class="col-12">
+                        <button type="submit" class="btn btn-primary w-100 btn-lg">Create</button>
+                    </div>
+                </form>
+      
+            </div>
+        </div>
     
 </body>
 </html>

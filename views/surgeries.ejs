@@ -26,13 +26,13 @@
                                 <p class="card-text"><%= surgery.description %></p>    
                             </div>
                             <div class="col-6">
-                                <h6><b>Symptoms</b></h6>
-                                <p><%= surgery.symptoms %> </p>
+                                <h6><b>Time</b></h6>
+                                <p><%= surgery.time %> </p>
 
                             </div>
                             <div class="col-6">
-                                <h6><b>Feelings</b></h6>
-                                <p><%= surgery.feeling %> </p>
+                                <h6><b>Day</b></h6>
+                                <p><%= surgery.day %> </p>
 
                             </div>
                         </div>
@@ -40,8 +40,46 @@
                 </div>
             </div>    
         <% }) %>
-       
-    </div>
+        <% if (surgeries.length == 0) { %>
+          <h2>No surgeries added yet</h2>
+      <% } %>
+  </div>
+  <h2>Create new</h2>
+  <div class="card">
+      <div class="card-body">
+          <form action="" method="post" class="row mt-3">
+              <div class="col-12 col-md-6">
+                  <div class="form-grup">
+                      <label for="name">Name</label>
+                      <input type="text" name="name" id="name" class="form-control">
+                  </div>
+              </div>
+
+              <div class="col-12">
+                  <div class="form-group">
+                      <label for=""> Description</label>
+                      <textarea name="description" id="" cols="30" rows="10" class="form-control"></textarea>
+                  </div>
+              </div>    
+              <div class="col-12 col-md-6">
+                  <div class="form-group">
+                      <label for="">Time</label>
+                      <textarea name="time" id="" cols="30" rows="10" class="form-control"></textarea>
+                  </div>
+              </div>    
+              <div class="col-12 col-md-6">
+                  <div class="form-group">
+                      <label for="">Day</label>
+                      <textarea name="day" id="" cols="30" rows="10" class="form-control"></textarea>
+                  </div>
+              </div>    
+              <div class="col-12">
+                  <button type="submit" class="btn btn-primary w-100 btn-lg">Create</button>
+              </div>
+          </form>
+
+      </div>
+  </div>
    
         
 

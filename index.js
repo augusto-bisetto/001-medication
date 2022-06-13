@@ -26,10 +26,16 @@ require('./models/User')
 require('./models/MedicalRecords')
 require('./models/Allergies')
 require('./models/Appointment')
+require('./models/Surgeries')
+require('./models/Immunizations')
+
 
 
  app.use(require('./routes/frontend'))
  app.use(require('./routes/allergies'))
+ app.use(require('./routes/surgeries'))
+ app.use(require('./routes/immunizations'))
+
 
 const frontendRoutes = require('./routes/frontend')
 
