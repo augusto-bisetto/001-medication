@@ -1,0 +1,67 @@
+@font-face {
+    font-family: heading ;
+    src: url(fonts/KronaOne-Regular.ttf);
+}
+
+@font-face {
+    font-family: body ;
+    src: url(fonts/Poppins-Medium.ttf);
+}
+
+h1{
+    font-family: heading;
+}
+
+h2{
+    margin-bottom: 0;
+    margin-top: 4px;
+    margin-left: 10px; 
+    font-family: heading;   
+}
+
+h3{
+    margin-left: 20px;
+    align-items: right;
+    font-family: heading;
+}
+
+h4{
+    font-family: body;
+}
+
+h5{
+    font-family: body;
+}
+
+strong{
+    color: #3F88AE;
+    font-family: body;
+}
+
+p{
+    font-family: body;
+}
+
+a{
+    font-family: body;
+}
+
+/* --------------------------------- */
+.row{
+    margin-bottom: 20px;
+}
+
+.col{
+    margin-right: 20px;
+}
+
+
+.card-header{
+    margin-bottom: 10px;
+    font-family: body;
+}
+
+.form-group{
+    margin-bottom: 10px;
+    font-family: body;
+}
